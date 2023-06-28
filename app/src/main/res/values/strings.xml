@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Soga</string>
+    <string name="onboarding_title_1">Soga</string>
+    <string name="onboarding_title_2">Chat With Ease</string>
+    <string name="onboarding_title_3">AI Friends</string>
+    <string name="onboarding_desc_1">Create friends and connect with families on the go</string>
+    <string name="onboarding_desc_2">All your chats secured, all your groups available when you need</string>
+    <string name="onboarding_desc_3">You have an AI assistant to help you in your daily tasks</string>
+</resources>
