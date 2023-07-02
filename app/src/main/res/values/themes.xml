@@ -22,6 +22,7 @@
 
     <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/purple_700</item>
     </style>
 
     <style name="RobotoButtonStyle" parent="android:Widget.Button">

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -36,10 +38,19 @@ public class OnboardingActivity extends AppCompatActivity {
         dotsLayout = findViewById(R.id.ll_dots_layout);
         saveState = new SaveState(this,"ob");
 
-        if (saveState.getState() == 1){
+        if (saveState.getState() > 0){
             startActivity(new Intent(OnboardingActivity.this,TermsConditionsActivity.class));
             finish();
         }
+
+        //change status bar color
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
 
         OnboardingAdapter adapter = new OnboardingAdapter(this);
         viewPager.setAdapter(adapter);
