@@ -36,9 +36,9 @@ public class OnboardingAdapter extends PagerAdapter {
     };
 
     private int images[] = {
+            R.drawable.logo,
             R.drawable.onboarding_1,
-            R.drawable.onboarding_1,
-            R.drawable.onboarding_1
+            R.drawable.onboarding_2
     };
 
     @Override

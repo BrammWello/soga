@@ -26,7 +26,7 @@ public class OnboardingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
@@ -57,13 +57,16 @@ public class OnboardingActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+                dotsFunction(position);
                 next.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (position < 3){
+                        if (position < 2){
                             viewPager.setCurrentItem(position + 1, true);
                         } else {
                             saveState.setState(1);
+                            startActivity(new Intent(OnboardingActivity.this,TermsConditionsActivity.class));
+                            finish();
                         }
                     }
                 });
@@ -80,14 +83,14 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     private void dotsFunction(int pos) {
-        dots = new TextView[4];
+        dots = new TextView[3];
         dotsLayout.removeAllViews();
 
         for (int i = 0 ; i< dots.length ; i++){
 
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("-"));
-            dots[i].setTextColor(getColor(R.color.purple_200));  //unselected color
+            dots[i].setTextColor(getColor(R.color.teal_200));  //unselected color
             dots[i].setTextSize(40);    //unselected size
 
             dotsLayout.addView(dots[i]);
