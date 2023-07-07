@@ -6,4 +6,6 @@
     <string name="onboarding_desc_1">Create friends and connect with families on the go</string>
     <string name="onboarding_desc_2">All your chats secured, all your groups available when you need</string>
     <string name="onboarding_desc_3">You have an AI assistant to help you in your daily tasks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

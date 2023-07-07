@@ -8,19 +8,19 @@ import android.view.View;
 
 import com.devbramm.soga.R;
 
-public class SplashActivity extends AppCompatActivity {
+public class PhoneOtpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_phone_otp);
 
-        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
-
+                startActivity(new Intent(PhoneOtpActivity.this, ProfileChangeStartActivity.class));
             }
         });
+
     }
 }
